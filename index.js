@@ -30,3 +30,12 @@ query OrganizationForLearningReact(
         }
     }
 }
+
+mutation AddStar($repositoryId: ID!) {
+    addStar(input: { starrableId: $repositoryId }) {
+        starrable {
+            id
+            viewerHasStarred
+        }
+    }
+}
